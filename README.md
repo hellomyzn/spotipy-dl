@@ -8,7 +8,7 @@ $ git clone git@github.com:hellomyzn/spotipy-dl.git
 ```
 2. Move to this
 ``` 
-$ cd spotipy-dl.git
+$ cd spotipy-dl
 ```
 3. Copy .env file
 ```
