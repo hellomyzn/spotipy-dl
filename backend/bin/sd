@@ -28,7 +28,7 @@ fi
 # Main logic
 if [ "$1" = "-m" ] || [ "$1" = "multiple" ]
 then
-    sudo vi $URLS_FILE_PATH
+    vi $URLS_FILE_PATH
 
     while read line   
     do

@@ -42,7 +42,7 @@ $ sd https://open.spotify.com/track/0j8c2BHYZpkBBNazmSSy4n?si=f5d07bbf837546e8
 #### Download multiple urls at once
 1. Run a command 
 ```
-sd -m
+$ sd -m
 ```
 2. Add urls through vim
 ![image](https://user-images.githubusercontent.com/20104403/171386955-710d52d8-4c1e-40ee-8f96-98e033702902.png)
