@@ -15,6 +15,9 @@ $ cd spotipy-dl
 $ cp .env.template .env
 ```
 4. Update your credentials on `.env`. if you don’t have them, get them at [link](https://developer.spotify.com/my-applications)
+```
+$ vi .env
+```
 5. Run download command
 ```
 $ sd url
