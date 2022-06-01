@@ -32,7 +32,7 @@ $ make up && make python
 ```
 6. Run download command
 ```
-$ sd url
+$ sd <<url>>
 # e.g.
 $ sd https://open.spotify.com/track/0j8c2BHYZpkBBNazmSSy4n?si=f5d07bbf837546e8
 ```
