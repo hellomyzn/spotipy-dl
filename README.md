@@ -1,5 +1,21 @@
-# docker-python-handson
-Based on https://qiita.com/jhorikawa_err/items/fb9c03c0982c29c5b6d5
+# Spotify downloader for docker
+
+
+### Steps
+
+1. Git clone
+```
+$ git clone git@github.com:hellomyzn/spotipy-dl.git
+```
+2. Move to this
+``` 
+$ cd spotipy-dl.git
+```
+3. Copy .env file
+```
+cp .env.template .env
+```
+4. Update your credentials on `.env`. if you don’t have them, get them at [link](https://developer.spotify.com/my-applications)
 
 
 ### Docker Command
