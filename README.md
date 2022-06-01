@@ -18,13 +18,17 @@ $ cp .env.template .env
 ```
 $ vi .env
 ```
-5. Run download command
+5. Run docker container command
+```
+$ make up && make python
+```
+6. Run download command
 ```
 $ sd url
 # e.g.
 $ sd https://open.spotify.com/track/0j8c2BHYZpkBBNazmSSy4n?si=f5d07bbf837546e8
 ```
-6. Check songs out on `backend/downloads`
+7. Check songs out on `backend/downloads`
 
 ### Usage
 #### Download multiple urls at onece
