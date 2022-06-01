@@ -1,4 +1,12 @@
 # Spotify downloader for docker
+This project is for `I POD` enthusiasts.
+
+The music lives on - Apple
+[https://www.apple.com/newsroom/2022/05/the-music-lives-on/](https://www.apple.com/newsroom/2022/05/the-music-lives-on/)
+
+RIP iPod 2001-2022: The complete history | Macworld
+[https://www.macworld.com/article/546753/ipod-timeline-nano-mini-shuffle-touch.html](https://www.macworld.com/article/546753/ipod-timeline-nano-mini-shuffle-touch.html)
+
 
 
 ### Steps
@@ -31,7 +39,7 @@ $ sd https://open.spotify.com/track/0j8c2BHYZpkBBNazmSSy4n?si=f5d07bbf837546e8
 7. Check songs out on `backend/downloads`
 
 ### Usage
-#### Download multiple urls at onece
+#### Download multiple urls at once
 1. md -m
 2. add urls through vim
 ![image](https://user-images.githubusercontent.com/20104403/171386955-710d52d8-4c1e-40ee-8f96-98e033702902.png)
