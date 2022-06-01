@@ -6,3 +6,4 @@
 *backend/downloads/*
 *.cache
 *src
+*.viminfo
