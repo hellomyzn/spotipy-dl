@@ -1,7 +1,7 @@
 # /bin/bash
 
 DOWNLADS_DIR="./downloads"
-SCR_DIR="./src"
+SRC_DIR="./src"
 URLS_FILE_PATH="./src/urls.txt"
  
 if [ -e $DOWNLADS_DIR ]
