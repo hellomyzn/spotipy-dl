@@ -41,7 +41,6 @@ def getDiscographies(spotify, search_id: str, album_type: str):
         while results['next']:
             results = spotify.next(results)
             album_datas.extend(results['items'])
-        print(len(album_datas))
         for data in album_datas :
             print(data['external_urls']['spotify'])
 

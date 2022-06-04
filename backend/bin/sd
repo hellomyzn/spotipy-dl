@@ -3,30 +3,57 @@
 DOWNLADS_DIR="./downloads"
 SRC_DIR="./src"
 URLS_FILE_PATH="./src/urls.txt"
- 
-if [ -e $DOWNLADS_DIR ]
-then
-  echo "[INFO]: DOWNLADS_DIR folder exists."
-else
-    mkdir $DOWNLADS_DIR
-fi
 
-if [ -e $SRC_DIR ] 
-then
-    echo "[INFO]: SRC_DIR folder exists."
-else
-    mkdir $SRC_DIR
-fi
 
-if [ -e $URLS_FILE_PATH ] 
-then
-  echo "[INFO]: URLS_FILE_PATH exists."
-else
-    touch $URLS_FILE_PATH
-fi
+function sd_usage {
+cat <<EOF 
+USAGE:
+    $ $(basename ${0}) [OPTION_NAME]
+
+OPTION_NAMES:
+
+    -m or --multiple:       Download songs with multiple urls.
+                            e.g.) $ sd -m
+
+    -a or --artist:         Download all singles and albums of an artist with an artist page url.
+                            e.g.) $ sd -a https://open.spotify.com/artist/7185Q95lPFld0aoPqO6e0U
+
+    -h or --help:           Show usage
+
+
+Enjoy :)
+
+
+EOF
+}
+
+function check_dir(){
+    if [ -e $1 ]
+    then
+        echo "[INFO]: ${1} folder exists."
+    else
+        echo "[INFO]: Create a new directory. (${1})"
+        mkdir $1
+    fi
+}
+
+function check_file(){
+    if [ -e $1 ]
+    then
+        echo "[INFO]: ${1} folder exists."
+    else
+        echo "[INFO]: Create a new directory. (${1})"
+        touch $1
+    fi
+}
+
+
+check_dir $DOWNLADS_DIR
+check_dir $SRC_DIR
+check_file $URLS_FILE_PATH
 
 # Main logic
-if [ "$1" = "-m" ] || [ "$1" = "multiple" ]
+if [ "$1" = "-m" ] || [ "$1" = "--multiple" ]
 then
     vi $URLS_FILE_PATH
 
@@ -34,9 +61,12 @@ then
     do
         spotify_dl -l $line -o ~/downloads
     done < $URLS_FILE_PATH
-elif [ "$1" = "-a" ] || [ "$1" = "artist" ]
+elif [ "$1" = "-a" ] || [ "$1" = "--artist" ]
 then
-    python $HOME/bin/get_discography.py $2
+    python $HOME/bin/get_discography.py $2 > $HOME/src/urls.txt
+elif [ "$1" = "-h" ] || [ "$1" = "--help" ]
+then
+    sd_usage
 else
     spotify_dl -l $1 -o ~/downloads
 fi
