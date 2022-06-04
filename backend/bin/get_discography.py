@@ -36,7 +36,7 @@ def getDiscographies(spotify, search_id: str, album_type: str):
             - compilation
     """
     try:
-        results = spotify.artist_albums(search_id, limit=50, country='US' album_type=album_type)
+        results = spotify.artist_albums(search_id, limit=50, album_type=album_type)
         album_datas = results['items']
         while results['next']:
             results = spotify.next(results)
