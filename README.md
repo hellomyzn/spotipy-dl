@@ -48,6 +48,13 @@ $ sd -m
 ![image](https://user-images.githubusercontent.com/20104403/171386955-710d52d8-4c1e-40ee-8f96-98e033702902.png)
 3. Check songs out in `backend/downloads`
 
+#### Download all singles and albums of artist
+```
+$ sd -a <<ARTIST PAGE URL>>
+# e.g.
+$ sd -a https://open.spotify.com/artist/<<ID>>
+```
+
 ### Docker Command
 ```
 # build
