@@ -47,6 +47,13 @@ function check_file(){
     fi
 }
 
+function download_multiple_urls(){
+    while read line   
+    do
+        spotify_dl -l $line -o ~/downloads
+    done < $URLS_FILE_PATH
+}
+
 
 check_dir $DOWNLADS_DIR
 check_dir $SRC_DIR
@@ -56,14 +63,11 @@ check_file $URLS_FILE_PATH
 if [ "$1" = "-m" ] || [ "$1" = "--multiple" ]
 then
     vi $URLS_FILE_PATH
-
-    while read line   
-    do
-        spotify_dl -l $line -o ~/downloads
-    done < $URLS_FILE_PATH
+    download_multiple_urls $URLS_FILE_PATH
 elif [ "$1" = "-a" ] || [ "$1" = "--artist" ]
 then
     python $HOME/bin/get_discography.py $2 > $HOME/src/urls.txt
+    download_multiple_urls $URLS_FILE_PATH
 elif [ "$1" = "-h" ] || [ "$1" = "--help" ]
 then
     sd_usage
