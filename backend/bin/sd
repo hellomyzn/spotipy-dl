@@ -34,6 +34,9 @@ then
     do
         spotify_dl -l $line -o ~/downloads
     done < $URLS_FILE_PATH
+elif [ "$1" = "-a" ] || [ "$1" = "artist" ]
+then
+    python $HOME/bin/get_discography.py $2
 else
     spotify_dl -l $1 -o ~/downloads
 fi
